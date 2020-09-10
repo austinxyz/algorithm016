@@ -28,16 +28,16 @@ Notes
 #### 简单：
 - [用 add first 或 add last 这套新的 API 改写 Deque 的代码](src/DequeExample.java)
 - [分析Queue和Priority Queue的源码](QueueAndPriorityQueueAnalysis.md)
-- [删除排序数组中的重复项](src/RemoveDuplicates.java) 
-- 旋转数组 
-- 合并两个有序链表 
-- 合并两个有序数组
-- 两数之和
-- 移动零
-- 加一
+- [26](https://leetcode.com/problems/remove-duplicates-from-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) - [删除排序数组中的重复项](src/RemoveDuplicates.java) 
+- [189](https://leetcode.com/problems/rotate-array/discuss/?currentPage=1&orderBy=most_votes&query=) - [旋转数组](src/RotateArray.java) 
+- [21](https://leetcode.com/problems/merge-two-sorted-lists/discuss/?currentPage=1&orderBy=most_votes&query=)  - 合并两个有序链表 
+- [88](https://leetcode.com/problems/merge-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) - 合并两个有序数组
+- [1](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=)  - 两数之和
+- [283](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=)  - 移动零
+- [66](https://leetcode.com/problems/plus-one/discuss/?currentPage=1&orderBy=most_votes&query=) - 加一
 
 #### 中等：
-- 设计循环双端队列
+- [641](https://leetcode.com/problems/design-circular-deque/discuss/?currentPage=1&orderBy=most_votes&query=) - 设计循环双端队列
 
 #### 困难：
-- 接雨水
+- [42](https://leetcode.com/problems/trapping-rain-water/discuss/?currentPage=1&orderBy=most_votes&query=) - 接雨水
