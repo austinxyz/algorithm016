@@ -9,8 +9,8 @@
 
 |方法名|作用|返回值|异常|补充说明|
 |-----|---|------|----|------|
-|add|增加一个值到Queue中|如果添加成功返回true|超过容量，元素类型不对，空指针，非法参数||
-|offer|增加一个值到Queue中|如果添加成功返回true|元素类型不对，空指针，非法参数|对于有容量限制的Queue，倾向于使用offer，因为超过容量不会抛出异常，只是返回false|
+|add|增加一个值到Queue中|如果添加成功返回true|超过容量(IllegalStateException)，元素类型不对(ClassCastException)，空指针(NPE)，非法参数(IllegalArgumentException)||
+|offer|增加一个值到Queue中|如果添加成功返回true|元素类型不对(ClassCastException)，空指针(NPE)，非法参数(IllegalArgumentException)|对于有容量限制的Queue，倾向于使用offer，因为超过容量不会抛出异常，只是返回false|
 |remove|获得和移除队列顶部元素|返回元素|NoSuchElementException （队列为空）||
 |poll|获得和移除队列顶部元素|返回元素，如果没有元素返回null|||
 |element|获得但不移除顶部元素|返回元素|NoSuchElementException （队列为空）||
@@ -34,7 +34,7 @@
     5. 构造函数传入SortedSet，调用构造函数3，将所有元素除null之外存在storage数组中
 - clear 清除整个queue，storage所有元素为null，used为0
 - iterator 从头iterate到used
-- offer 如果插入元素为空，返回NPE，从-1开始找到第一个null的slot，将这个slot赋为插入只，used加一，调用bubbleUp保证priority正确 （用比较器父的大于子）
+- offer 如果插入元素为空，返回NPE，从-1开始找到第一个null的slot，将这个slot赋为插入元素，used加一，调用bubbleUp保证priority正确 （用比较器父的大于子）
 - peek 如果为空，返回null，不然返回第一个元素
 - poll 如果为空，返回null，不然将第一个元素返回，并调用remove（0）
 - remove
