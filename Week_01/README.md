@@ -5,3 +5,4 @@ Completed list
 2. Setup IDEA
 3. Github account create & fork
 4. Git clone and update week 1 README.md
+5. Watch Videos
