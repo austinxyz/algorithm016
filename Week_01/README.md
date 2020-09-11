@@ -86,8 +86,12 @@ Note：
 - [1](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=)  - [两数之和](src/TwoSum.java)
     - 排序后前后指针，要保留原数组，然后找到原来的index比较麻烦一些，而且要考虑两个数相等的情况
     - 另一个解就是用hashMap
-- [283](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=)  - 移动零
-- [66](https://leetcode.com/problems/plus-one/discuss/?currentPage=1&orderBy=most_votes&query=) - 加一
+- [283](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=)  - [移动零](src/MoveZeroes.java)
+    - 用两个指针从0开始，一个指向零，一直指向非零，如果非零index大于零，那么需要交换。两个指针都往前，需要注意的是，如果非零index小于零，那么，那么零的位置保留，非零的位置往前。
+    - 高分写法，记录insert指针，从零开始，发现非零，就将当前insert指针赋值，同时insert指针加1。最后将后面所有的赋为0。
+- [66](https://leetcode.com/problems/plus-one/discuss/?currentPage=1&orderBy=most_votes&query=) - [加一](src/PlusOne.java)
+    - 从后往前遍历，如果大于9，那么进位，如果最后一位也要进位，建一个长度+1的新数组，第一个位赋1
+    - 高分写法，如果不需要进位，那么直接返回数组，如果最后一位也要进位，建一个长度+1的新数组，第一个位赋1，返回新数组
 
 ### 中等：
 - [641](https://leetcode.com/problems/design-circular-deque/discuss/?currentPage=1&orderBy=most_votes&query=) - 设计循环双端队列
