@@ -62,9 +62,7 @@ class Solution {
 
         int length = nums.length;
 
-        while (k >= length) {
-            k = k - length;
-        }
+        k = k % length;
 
         if (length <= 1 || k == 0 ) {
             return;
