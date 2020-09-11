@@ -72,6 +72,7 @@ Note：
 - [分析Queue和Priority Queue的源码](QueueAndPriorityQueueAnalysis.md)
 - [26](https://leetcode.com/problems/remove-duplicates-from-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) - [删除排序数组中的重复项](src/RemoveDuplicates.java)
     - 除了返回新的数组长度，数组的值也要压缩 
+    - 可以用快慢指针，快指针for循环，慢指针初始为0，只有在不等于的时候，先++，然后赋值，最后长度为慢指针+1
 - [189](https://leetcode.com/problems/rotate-array/discuss/?currentPage=1&orderBy=most_votes&query=) - [旋转数组](src/RotateArray.java) 
     - 我用的是每次找到下一个要替换的位置的方法，但是要考虑可能k被n整除的情况，总共替换O（n）次，但是有不少判断条件
     - 高分的写法是通过三次reverse，把整个reverse，然后0，k-1 reverse，k，n-1 reverse，总共替换O（2n）很简洁但是不一定马上能想到
@@ -82,7 +83,9 @@ Note：
 - [88](https://leetcode.com/problems/merge-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) - [合并两个有序数组](src/MergeSortedArray.java)
     - 从后往前merge，一个while，条件语句写的有点复杂
     - 高分写法，两个循环，先做到其中一个为-1，然后另一个循环将数组2剩余的复制过来，如果数组2已经是-1了，那就不用复制了
-- [1](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=)  - 两数之和
+- [1](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=)  - [两数之和](src/TwoSum.java)
+    - 排序后前后指针，要保留原数组，然后找到原来的index比较麻烦一些，而且要考虑两个数相等的情况
+    - 另一个解就是用hashMap
 - [283](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=)  - 移动零
 - [66](https://leetcode.com/problems/plus-one/discuss/?currentPage=1&orderBy=most_votes&query=) - 加一
 
