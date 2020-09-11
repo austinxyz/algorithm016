@@ -76,7 +76,7 @@ Note：
     - 我用的是每次找到下一个要替换的位置的方法，但是要考虑可能k被n整除的情况，总共替换O（n）次，但是有不少判断条件
     - 高分的写法是通过三次reverse，把整个reverse，然后0，k-1 reverse，k，n-1 reverse，总共替换O（2n）很简洁但是不一定马上能想到
     - Brute force的写法，就是k个循环，每次移动一位，这样是O（k*n）次
-- [21](https://leetcode.com/problems/merge-two-sorted-lists/discuss/?currentPage=1&orderBy=most_votes&query=)  - 合并两个有序链表 
+- [21](https://leetcode.com/problems/merge-two-sorted-lists/discuss/?currentPage=1&orderBy=most_votes&query=)  - [合并两个有序链表](src/MergeSortedLists.java) 
 - [88](https://leetcode.com/problems/merge-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) - 合并两个有序数组
 - [1](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=)  - 两数之和
 - [283](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=)  - 移动零
