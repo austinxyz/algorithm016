@@ -52,14 +52,16 @@ Note：
 - 同样二维结构，平衡二叉树比跳表实现逻辑更加复杂。他们的算法复杂度是类似。
 
 #### 实战题目
-- 移动零 - 用同侧双指针，如果当前为零，找到右边最近的非零交换
-- 盛水最多的容器 - 用两侧双指针，记录当前最大值，通过移动两侧高度小的那个，使得高度变大来抵消宽度变小。
-- 爬楼梯 - 用递归，但是需要用memo来消除重复计算
-- 3数之和 - 先考虑两数之和。两数之和 （暴力解法双循环，HashMap两次循环，排序后两端双指针），然后用三指针，第一个指针扫描0，n-3，第2，3个指针用双端双指针。
-- 环形链表 - 用快慢指针，如果快的赶上慢的。
-- 反转链表 - 记住指针，加一个哨兵
-- 两两交换节点 - 记住指针
-- K个一组翻转链表 - 记住头尾
+- [283 移动零](https://leetcode.com/problems/move-zeroes/discuss/?currentPage=1&orderBy=most_votes&query=) - 用同侧双指针，如果当前为零，找到右边最近的非零交换
+- [11 盛水最多的容器](https://leetcode.com/problems/container-with-most-water/discuss/?currentPage=1&orderBy=most_votes&query=) - 用两侧双指针，记录当前最大值，通过移动两侧高度小的那个，使得高度变大来抵消宽度变小。
+- [70 爬楼梯](https://leetcode.com/problems/climbing-stairs/discuss/?currentPage=1&orderBy=most_votes&query=) - 用递归，但是需要用memo来消除重复计算
+- [15 3数之和](https://leetcode.com/problems/3sum/discuss/?currentPage=1&orderBy=most_votes&query=) - 先考虑两数之和。两数之和 （暴力解法双循环，HashMap两次循环，排序后两端双指针），然后用三指针，第一个指针扫描0，n-3，第2，3个指针用双端双指针。
+- [141 环形链表](https://leetcode.com/problems/linked-list-cycle/discuss/?currentPage=1&orderBy=most_votes&query=)  - 用快慢指针，如果快的赶上慢的。
+- [142 环形链表 II](https://leetcode.com/problems/linked-list-cycle-ii/discuss/?currentPage=1&orderBy=most_votes&query=) 
+- [206 反转链表](https://leetcode.com/problems/reverse-linked-list/discuss/?currentPage=1&orderBy=most_votes&query=)  - 记住指针，加一个哨兵
+- [24 两两交换节点](https://leetcode.com/problems/swap-nodes-in-pairs/discuss/?currentPage=1&orderBy=most_votes&query=) - 记住指针
+- [25 K个一组翻转链表](https://leetcode.com/problems/reverse-nodes-in-k-group/discuss/?currentPage=1&orderBy=most_votes&query=) - 记住头尾
+- [146 LRU缓存](https://leetcode.com/problems/lru-cache/discuss/?currentPage=1&orderBy=most_votes&query=)
 
 ### 栈，队列，优先队列，双端队列
 - 栈和队列，一个是先入先出，一个是先入后出，适合不同的需要。insert，delete是O（1）
@@ -67,10 +69,10 @@ Note：
 - 双端队列可以同时支持stack和queue
 
 #### 实战题目
-- 有效的括号 - 典型的堆栈应用，通过看到（，压入），这样可以用equals来比较。节省代码
-- 最小栈 - 就是自己实现一个栈，可以通过一个数组和栈指针来实现
-- 柱状图中最大矩形 - 暴力解法，双循环+找到最小值。考虑用堆栈，如果左边的数小于右边的数，那么要压栈，因为右边界还不能确定，不然右边界确定，可以算出对应下标的矩形值。
-- 滑动窗口最大值 - 暴力解法，每个滑动窗口都计算，考虑使用双端队列，将当前值的下标加入队列，如果队列中对应值比这个要小，可以都移调。如果队列头的元素下标超过了窗口，那么去掉队列头元素。
+- [20 有效的括号](https://leetcode.com/problems/valid-parentheses/discuss/?currentPage=1&orderBy=most_votes&query=)  - 典型的堆栈应用，通过看到（，压入），这样可以用equals来比较。节省代码
+- [155 最小栈](https://leetcode.com/problems/min-stack/discuss/?currentPage=1&orderBy=most_votes&query=) - 就是自己实现一个栈，可以通过一个数组和栈指针来实现
+- [84 柱状图中最大矩形](https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/?currentPage=1&orderBy=most_votes&query=) - 暴力解法，双循环+找到最小值。考虑用堆栈，如果左边的数小于右边的数，那么要压栈，因为右边界还不能确定，不然右边界确定，可以算出对应下标的矩形值。
+- [239 滑动窗口最大值](https://leetcode.com/problems/sliding-window-maximum/discuss/?currentPage=1&orderBy=most_votes&query=) - 暴力解法，每个滑动窗口都计算，考虑使用双端队列，将当前值的下标加入队列，如果队列中对应值比这个要小，可以都移调。如果队列头的元素下标超过了窗口，那么去掉队列头元素。
 
 ## 本周作业
 
