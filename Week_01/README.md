@@ -6,8 +6,8 @@
 3. Github account create & fork
 4. Git clone and update week 1 README.md
 5. Watch Videos
-6. Coding
-7. Comments
+6. Coding homework
+7. Comments and Notes
 
 ## 本周课程
 
@@ -35,9 +35,16 @@ Note：
 - Coding Style和快捷键会提高效率，减少bug，显示你的专业程度
 - 边界条件，多考虑一下
 - 不要写一些很短但是不容易理解的写法，还是要保证成功率第一。
+- 采用自顶向下的写法，写好大框架，再细化
 
 ### 时间空间复杂度分析
-- 常用复杂度 
+- 常用复杂度 O(1), O(n), O(logN), O(n^2), O(n^3), O(2^n), O(n!)
+- 常用算法
+  - 二分搜索 O（logN）
+  - 二叉树遍历 O（n）
+  - 二维有序矩阵搜索O（n）
+  - merge排序）O（nlogN）
+  - 图的遍历 O（n）
 
 ### 数组，链表，跳表
 - 数组，链表各有优劣，数组O（1）lookup，插入删除 O（n），链表O（n）lookup，插入删除O（1）
