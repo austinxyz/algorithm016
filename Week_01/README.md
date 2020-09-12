@@ -94,7 +94,9 @@ Note：
     - 高分写法，如果不需要进位，那么直接返回数组，如果最后一位也要进位，建一个长度+1的新数组，第一个位赋1，返回新数组
 
 ### 中等：
-- [641](https://leetcode.com/problems/design-circular-deque/discuss/?currentPage=1&orderBy=most_votes&query=) - 设计循环双端队列
+- [641](https://leetcode.com/problems/design-circular-deque/discuss/?currentPage=1&orderBy=most_votes&query=) - [设计循环双端队列](src/MyCircularDeque.java)
+    - 记录head，tail，usedSize，和size。初始head=0，tail=size-1
 
 ### 困难：
-- [42](https://leetcode.com/problems/trapping-rain-water/discuss/?currentPage=1&orderBy=most_votes&query=) - 接雨水
+- [42](https://leetcode.com/problems/trapping-rain-water/discuss/?currentPage=1&orderBy=most_votes&query=) - [接雨水](src/TrappingRainWater.java)
+    - 双指针，找到左右两边边可以接雨水的边界，从小的一侧开始往里，如果当前值比边界小，那么差值就是雨水，否则就是新的边界
