@@ -34,6 +34,31 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
+
+//    public void merge(int[] nums1, int m, int[] nums2, int n) {
+//        int id1 = m -1  ;
+//        int id2 = n -1;
+//
+//        int index = m+n -1;
+//
+//        while (id1 >=0 && id2 >=0) {
+//            if (nums1[id1] > nums2[id2]) {
+//                nums1[index] = nums1[id1];
+//                id1--;
+//            } else {
+//                nums1[index] = nums2[id2];
+//                id2--;
+//            }
+//            index--;
+//        }
+//
+//        while(id2 >=0) {
+//            nums1[index] = nums2[id2--];
+//            index--;
+//        }
+//
+//    }
+
     public void merge(int[] nums1, int m, int[] nums2, int n) {
 
         int n1 = m-1;

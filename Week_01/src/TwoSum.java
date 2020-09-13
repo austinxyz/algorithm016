@@ -44,6 +44,29 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
+
+//    Map<Integer, Integer> numMap = new HashMap<Integer, Integer>();
+//
+//    public int[] twoSum(int[] nums, int target) {
+//
+//        for (int i=0; i < nums.length; i++) {
+//            numMap.put(nums[i], i);
+//        }
+//
+//        for (int i=0; i< nums.length; i++) {
+//            if (numMap.containsKey(target - nums[i])) {
+//                int[] result = new int[2];
+//                result[0] = i;
+//                result[1] = numMap.get(target - nums[i]);
+//                if (result[0] != result[1]) {
+//                    return result;
+//                }
+//            }
+//        }
+//
+//        return null;
+//    }
+
     public int[] twoSum(int[] nums, int target) {
 
         int[] orginalNums = Arrays.copyOf(nums, nums.length);

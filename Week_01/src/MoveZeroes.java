@@ -18,6 +18,28 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
+
+//    public void moveZeroes(int[] nums) {
+//
+//        if (nums.length <= 1) {
+//            return;
+//        }
+//
+//        int nzIndex = 0;
+//
+//        for (int i=0; i< nums.length; i++) {
+//            if (nums[i]!=0) {
+//                nums[nzIndex] = nums[i];
+//                nzIndex++;
+//            }
+//        }
+//
+//        for (int i = nzIndex; i< nums.length; i++) {
+//            nums[i] = 0;
+//        }
+//
+//    }
+
     public void moveZeroes(int[] nums) {
 
         if (nums.length <= 1) {
