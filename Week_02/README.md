@@ -16,7 +16,9 @@
 - [49](https://leetcode.com/problems/group-anagrams/discuss/?currentPage=1&orderBy=most_votes&query=) 字母异位词分组
 - [1](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=)  两数之和
 
-### 树，二叉树，二叉生成树
+### 树，二叉树，二叉搜索树
+- 二维结构，为什么有树，来源于现实
+- 二叉搜索树， 插入，删除 O（logN）
 
 #### 实战题目
 
