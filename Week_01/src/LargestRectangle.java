@@ -34,13 +34,15 @@ class Solution {
 
         int index = 0;
 
-        while (index < heights.length) {
+        while (index <= heights.length) {
+
+            int h = index == heights.length? 0: heights[index];
 
             if (leftHeights.isEmpty()) {
                 leftHeights.push(index);
             } else {
 
-                while (!leftHeights.isEmpty() && heights[leftHeights.peek()] > heights[index]) {
+                while (!leftHeights.isEmpty() && heights[leftHeights.peek()] > h) {
 
                     int hIndex = leftHeights.pop();
 
@@ -55,18 +57,6 @@ class Solution {
             }
 
             index++;
-        }
-
-        while(!leftHeights.isEmpty()) {
-
-            int hIndex = leftHeights.pop();
-
-            int leftIndex = leftHeights.isEmpty()? 0: leftHeights.peek() + 1;
-
-            int area = (index - leftIndex) * heights[hIndex];
-
-            maxArea = Math.max(maxArea, area);
-
         }
 
         return maxArea;

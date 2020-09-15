@@ -17,6 +17,34 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
+
+//    public int trap(int[] height) {
+//
+//        Stack<Integer> stack = new Stack<Integer>();
+//
+//        int area = 0;
+//
+//        for (int i =0; i < height.length; i++) {
+//
+//            if (stack.isEmpty()) {
+//                stack.push(i);
+//            } else {
+//
+//                while(!stack.isEmpty() && height[stack.peek()] <= height[i]) {
+//                    int bottom = stack.pop();
+//                    if (!stack.isEmpty()) {
+//                        area += (i - 1 - stack.peek()) * (Math.min(height[i], height[stack.peek()])-height[bottom]);
+//                    }
+//                }
+//                stack.push(i);
+//            }
+//
+//        }
+//
+//        return area;
+//
+//    }
+
     public int trap(int[] height) {
 
         if (height.length <= 1) {
