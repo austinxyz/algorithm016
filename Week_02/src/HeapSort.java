@@ -12,8 +12,6 @@ public class HeapSort {
 
         int[] result = new int[nums.length];
 
-        System.arraycopy(nums, 0, result, 0, nums.length);
-
         for (int i= nums.length/2 -1 ; i >=0; i--) {
             heapify(nums, nums.length, i);
         }

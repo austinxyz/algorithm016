@@ -10,6 +10,7 @@
 
 ### Hash表，映射，集合
 - Hash， O（1），最差情况 O（n）- 如果都hash在一起了
+- 出现Hash碰撞的，可以保存为链表，或者红黑树
 
 #### 实战题目
 
@@ -43,11 +44,17 @@
 ## 本周作业
 
 ### 简单
-- 关于HashMap的小总结
-- [242](https://leetcode.com/problems/valid-anagram/discuss/?currentPage=1&orderBy=most_votes&query=) 有效的字母异位词
-- [1](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=)  两数之和
+- [关于HashMap的小总结](HashMap.md)
+- [242](https://leetcode.com/problems/valid-anagram/discuss/?currentPage=1&orderBy=most_votes&query=) [有效的字母异位词](ValidAnagram.java)
+    - 建一个26的数组，分别统计a-z的个数，s的话++，t的话--，最后看有没有都是0
+
+- [1](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=)  [两数之和](TwoSum.java)
+    - 将数组值为key，index在value放在Map中，然后再遍历数组，如果target-当前元素在Map的keySet中，同时value不是当前index，那么就是符合要求的两数
+
 - [589](https://leetcode.com/problems/n-ary-tree-preorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) N叉树的前序遍历 
-- HeapSort
+
+- [HeapSort](src/HeapSort.java)
+    - 将0-（n/2-1）做heapify，这样保证符合最小堆的要求，然后每次取出堆顶元素，将最后一个数放在堆顶重新heapify。
 
 ### 中等：
 - [49](https://leetcode.com/problems/group-anagrams/discuss/?currentPage=1&orderBy=most_votes&query=) 字母异位词分组
