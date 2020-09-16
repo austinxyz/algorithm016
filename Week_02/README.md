@@ -51,7 +51,8 @@
 - [1](https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=)  [两数之和](TwoSum.java)
     - 将数组值为key，index在value放在Map中，然后再遍历数组，如果target-当前元素在Map的keySet中，同时value不是当前index，那么就是符合要求的两数
 
-- [589](https://leetcode.com/problems/n-ary-tree-preorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) N叉树的前序遍历 
+- [589](https://leetcode.com/problems/n-ary-tree-preorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) [N叉树的前序遍历](NTreePreorder.java) 
+    - 先根后子
 
 - [HeapSort](src/HeapSort.java)
     - 将0-（n/2-1）做heapify，这样保证符合最小堆的要求，然后每次取出堆顶元素，将最后一个数放在堆顶重新heapify。
