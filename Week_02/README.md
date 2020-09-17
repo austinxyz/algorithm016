@@ -58,9 +58,11 @@
     - 将0-（n/2-1）做heapify，这样保证符合最小堆的要求，然后每次取出堆顶元素，将最后一个数放在堆顶重新heapify。
 
 ### 中等：
-- [49](https://leetcode.com/problems/group-anagrams/discuss/?currentPage=1&orderBy=most_votes&query=) 字母异位词分组
-- [94](https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=)  二叉树的中序遍历
-- [144](https://leetcode.com/problems/binary-tree-preorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) 二叉树的前序遍历
-- [429](https://leetcode.com/problems/n-ary-tree-level-order-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) N叉树的层序遍历
-- [264](https://leetcode.com/problems/ugly-number-ii/discuss/?currentPage=1&orderBy=most_votes&query=) 丑数
+- [49](https://leetcode.com/problems/group-anagrams/discuss/?currentPage=1&orderBy=most_votes&query=) [字母异位词分组](GroupAnagrams.java)
+    - 将每个string排序作为key，然后维持一个Map，保留原始的list，将string加到list中，最后输出所有value作为一个list
+    - 高分写法，int[26]数组记录每个char的个数，convert成string作为key，维持一个map保留原始的list，将string加到list中，最后输出所有value作为一个list
+- [94](https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=)  [二叉树的中序遍历](BTreeInOrder.java)
+- [144](https://leetcode.com/problems/binary-tree-preorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) [二叉树的前序遍历](BTreePreOrder.java)
+- [429](https://leetcode.com/problems/n-ary-tree-level-order-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) [N叉树的层序遍历](NTreeLevelOrder.java)
+- [264](https://leetcode.com/problems/ugly-number-ii/discuss/?currentPage=1&orderBy=most_votes&query=) [丑数](UglyNumber.java)
 - [347](https://leetcode.com/problems/top-k-frequent-elements/discuss/?currentPage=1&orderBy=most_votes&query=) 前 K 个高频元素
