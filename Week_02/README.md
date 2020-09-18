@@ -64,5 +64,8 @@
 - [94](https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=)  [二叉树的中序遍历](BTreeInOrder.java)
 - [144](https://leetcode.com/problems/binary-tree-preorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) [二叉树的前序遍历](BTreePreOrder.java)
 - [429](https://leetcode.com/problems/n-ary-tree-level-order-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) [N叉树的层序遍历](NTreeLevelOrder.java)
+    -记录层，以及Map，将层作为key，List记录每层的node值
 - [264](https://leetcode.com/problems/ugly-number-ii/discuss/?currentPage=1&orderBy=most_votes&query=) [丑数](UglyNumber.java)
+    - 因为所有的数 都是 老的数*2，*3，*5， 可以记录index2，index3，index5，都是从0开始，然后当前数是*2，*3，*5的最小值，如果是其中的最小值，将对应的index++
 - [347](https://leetcode.com/problems/top-k-frequent-elements/discuss/?currentPage=1&orderBy=most_votes&query=) [前 K 个高频元素](TopKFreq.java)
+    - 保留一个Map，记录每个数的频率，然后建一个数组，将频率作为index，List保留所有的值，然后从n开始往后数出k个元素
