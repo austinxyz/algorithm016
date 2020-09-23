@@ -43,7 +43,9 @@
 
 ## 本周作业
 
-- [236](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的最近公共祖先]
+- [236](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/discuss/?currentPage=1&orderBy=most_votes&query=) | [二叉树的最近公共祖先](LCABinaryTree.java)
+    - 递归，从root，如果root是q或者p，那么返回root，否则看root.left，和root.right下有没至少一个p或者q，如果都在一侧则返回LCA，如果在两侧，则返回root。
+
 - [105](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [从前序与中序遍历序列构造二叉树]
 - [77](https://leetcode.com/problems/combinations/discuss/?currentPage=1&orderBy=most_votes&query=) | [组合]
 - [46](https://leetcode.com/problems/permutations/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列]
