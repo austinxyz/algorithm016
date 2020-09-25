@@ -52,5 +52,8 @@
 - [77](https://leetcode.com/problems/combinations/discuss/?currentPage=1&orderBy=most_votes&query=) | [组合](Combinations.java)
     - 因为是不考虑次序的，可以让升序排列，保留前序list，然后从list的最后元素 +1开始保证是升序的。递归到k层。
     
-- [46](https://leetcode.com/problems/permutations/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列]
-- [47](https://leetcode.com/problems/permutations-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列 II]
+- [46](https://leetcode.com/problems/permutations/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列](Permutations.java)
+    - 记录下前序list，考虑次序，所以每次都是for i to n，递归，因为数没有重复，用一个set来判断是不是已经用了
+
+- [47](https://leetcode.com/problems/permutations-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [全排列 II](PermutationII.java)
+    - 记录下前序的list，以及已经用过的下标集合，因为是有重合的，对数排个需，这样如果上一个list的值和下一个相同，那么就可以skip这个list。
