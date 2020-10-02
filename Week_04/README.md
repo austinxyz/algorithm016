@@ -121,7 +121,7 @@ public int binarySearch(int[] array, int target) {
 
 | 题号 | 名称 | 难度 | 分类 | 备注 |
 | --- | --- | --- | --- | --- |
-| [860](https://leetcode.com/problems/lemonade-change/discuss/?currentPage=1&orderBy=most_votes&query=) | [柠檬水找零]()| 🟢 简单 | 贪心算法 | - |
+| [860](https://leetcode.com/problems/lemonade-change/discuss/?currentPage=1&orderBy=most_votes&query=) | [柠檬水找零](LemonadeChange.java)| 🟢 简单 | 贪心算法 | 记录手中的5分，10分的数量，尽量先找10分 |
 | [122](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [买卖股票的最佳时机 II]()| 🟢 简单 | 贪心算法 | - |
 | [455](https://leetcode.com/problems/assign-cookies/discuss/?currentPage=1&orderBy=most_votes&query=) | [分发饼干]()| 🟢 简单 | 贪心算法 | - |
 | [874](https://leetcode.com/problems/walking-robot-simulation/discuss/?currentPage=1&orderBy=most_votes&query=) | [模拟行走机器人]()| 🟢 简单 | 贪心算法 | - |
