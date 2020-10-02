@@ -136,3 +136,7 @@ public int binarySearch(int[] array, int target) {
 | [126](https://leetcode.com/problems/word-ladder-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [单词接龙 II]()| 🔴 困难 | 深度优先、广度优先 | - |
 
 - 使用二分查找，寻找一个半有序数组 [4, 5, 6, 7, 0, 1, 2] 中间无序的地方
+假定是升序的
+left=0，right=6, mid=3, 1，array[mid]>array[left], 2，array[right]>array[mid] 发现 #2不符合假设，说明无序的#2， left=mid=3
+left=3，right=6，mid=4，1，array[mid]>array[left], 2，array[right]>array[mid] 发现 #1不符合假设，说明无序的#1，right=mid=4
+如果right-left=4，那么已经找到无序的地方了
