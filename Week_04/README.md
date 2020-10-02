@@ -139,4 +139,4 @@ public int binarySearch(int[] array, int target) {
     - 假定是升序的
     - left=0，right=6, mid=3, 1，array[mid]>array[left], 2，array[right]>array[mid] 发现 #2不符合假设，说明无序的#2， left=mid=3
     - left=3，right=6，mid=4，1，array[mid]>array[left], 2，array[right]>array[mid] 发现 #1不符合假设，说明无序的#1，right=mid=4
-    - 如果right-left=4，那么已经找到无序的地方了
+    - 如果right-left=1，那么已经找到无序的地方了
