@@ -126,17 +126,37 @@ public int binarySearch(int[] array, int target) {
 | [455](https://leetcode.com/problems/assign-cookies/discuss/?currentPage=1&orderBy=most_votes&query=) | [分发饼干](AssignCookies.java)| 🟢 简单 | 贪心算法 | 先排序，i=0，j=0, 如果小孩可以满足 i++,j++, 不然就只是j++，最后计数所有可以满足的小孩 |
 | [874](https://leetcode.com/problems/walking-robot-simulation/discuss/?currentPage=1&orderBy=most_votes&query=) | [模拟行走机器人](WalkingRobot.java)| 🟢 简单 | 贪心算法 | 判断command，如果负，确定方向，如果正，根据障碍信息，确定坐标，每次都算欧几里得距离，保留最大值 |
 | [127](https://leetcode.com/problems/word-ladder/discuss/?currentPage=1&orderBy=most_votes&query=) | [单词接龙](WordLadder.java)| 🟡 中等 | 深度优先、广度优先 | 广度优先，找到和当前单词差一个char的单词集合（排除那些已经使用过的），将其加在一个queue中，level+1，继续遍历这个queue，直到发现目标单词 |
-| [200](https://leetcode.com/problems/number-of-islands/discuss/?currentPage=1&orderBy=most_votes&query=) | [岛屿数量]()| 🟡 中等 | 深度优先、广度优先 | - |
-| [529](https://leetcode.com/problems/minesweeper/discuss/?currentPage=1&orderBy=most_votes&query=) | [扫雷游戏]()| 🟡 中等 | 深度优先、广度优先 | - |
-| [55](https://leetcode.com/problems/jump-game/discuss/?currentPage=1&orderBy=most_votes&query=) | [跳跃游戏]()| 🟡 中等 | 贪心算法 | - |
-| [45](https://leetcode.com/problems/jump-game-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [跳跃游戏 II]()| 🟡 中等 | 贪心算法 | - |
+| [200](https://leetcode.com/problems/number-of-islands/discuss/?currentPage=1&orderBy=most_votes&query=) | [岛屿数量](IslandsNumber.java)| 🟡 中等 | 深度优先、广度优先 | 遍历数组，如果发现当前点为'1'，那么将其变为'0'，同时将相邻为'1'也变为'0'，岛屿数量++，直到所有都是'0' |
+| [529](https://leetcode.com/problems/minesweeper/discuss/?currentPage=1&orderBy=most_votes&query=) | [扫雷游戏](Mindesweeper.java)| 🟡 中等 | 深度优先、广度优先 | 如果当前点是M，那么标记为X，结束，如果当前是E，那么要计算count，如果count==0，那么标记为'B'，同时计算周围的点，否则将当前点标记为count，结束|
+| [55](https://leetcode.com/problems/jump-game/discuss/?currentPage=1&orderBy=most_votes&query=) | [跳跃游戏](JumpGame.java)| 🟡 中等 | 贪心算法 | 遍历数组，发现最大的i+nums[i]，如果永远大于当前i，最后大于数组长度-1，那么返回true |
+| [45](https://leetcode.com/problems/jump-game-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [跳跃游戏 II](JumpGameII.java)| 🟡 中等 | 贪心算法 | 查询当前i到当前最大距离，发现最大的i+num[i]，这个就是下一个最大距离，jump+1，继续找下一个最大距离，直到距离大于数组长度-1|
 | [33](https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [搜索旋转排序数组]()| 🟡 中等 | 二分查找 | - |
 | [74](https://leetcode.com/problems/search-a-2d-matrix/discuss/?currentPage=1&orderBy=most_votes&query=) | [搜索二维矩阵]()| 🟡 中等 | 二分查找 | - |
 | [153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [寻找旋转排序数组中的最小值]()| 🟡 中等 | 二分查找 | - |
 | [126](https://leetcode.com/problems/word-ladder-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [单词接龙 II]()| 🔴 困难 | 深度优先、广度优先 | - |
 
 - 使用二分查找，寻找一个半有序数组 [4, 5, 6, 7, 0, 1, 2] 中间无序的地方
-    - 假定是升序的
+    - 假定是升序的 left<mid<right
     - left=0，right=6, mid=3, 1，array[mid]>array[left], 2，array[right]>array[mid] 发现 #2不符合假设，说明无序的#2， left=mid=3
     - left=3，right=6，mid=4，1，array[mid]>array[left], 2，array[right]>array[mid] 发现 #1不符合假设，说明无序的#1，right=mid=4
     - 如果right-left=1，那么已经找到无序的地方了
+    
+ ```java
+ public int findDisOrder(int[] array) {
+     
+    int left = 0, right = array.length - 1, mid;
+    while ((right-left) > 1) {
+         mid = (right - left) / 2 + left;
+ 
+         if (array[left] > array[mid]) {
+             right = mid;
+         }
+         
+         if (array[mid] > array[right]) {
+             left = mid;
+         }
+     }
+ 
+     return right;
+ }
+ ```
