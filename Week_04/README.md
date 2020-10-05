@@ -130,9 +130,9 @@ public int binarySearch(int[] array, int target) {
 | [529](https://leetcode.com/problems/minesweeper/discuss/?currentPage=1&orderBy=most_votes&query=) | [扫雷游戏](Minesweeper.java)| 🟡 中等 | 深度优先、广度优先 | 如果当前点是M，那么标记为X，结束，如果当前是E，那么要计算count，如果count==0，那么标记为'B'，同时计算周围的点，否则将当前点标记为count，结束|
 | [55](https://leetcode.com/problems/jump-game/discuss/?currentPage=1&orderBy=most_votes&query=) | [跳跃游戏](JumpGame.java)| 🟡 中等 | 贪心算法 | 遍历数组，发现最大的i+nums[i]，如果永远大于当前i，最后大于数组长度-1，那么返回true |
 | [45](https://leetcode.com/problems/jump-game-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [跳跃游戏 II](JumpGameII.java)| 🟡 中等 | 贪心算法 | 查询当前i到当前最大距离，发现最大的i+num[i]，这个就是下一个最大距离，jump+1，继续找下一个最大距离，直到距离大于数组长度-1|
-| [33](https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [搜索旋转排序数组]()| 🟡 中等 | 二分查找 | - |
-| [74](https://leetcode.com/problems/search-a-2d-matrix/discuss/?currentPage=1&orderBy=most_votes&query=) | [搜索二维矩阵]()| 🟡 中等 | 二分查找 | - |
-| [153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [寻找旋转排序数组中的最小值]()| 🟡 中等 | 二分查找 | - |
+| [33](https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [搜索旋转排序数组](SearchRotatedSortedArray.java)| 🟡 中等 | 二分查找 | - |
+| [74](https://leetcode.com/problems/search-a-2d-matrix/discuss/?currentPage=1&orderBy=most_votes&query=) | [搜索二维矩阵](Search2DMatrix.java)| 🟡 中等 | 二分查找 | - |
+| [153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/discuss/?currentPage=1&orderBy=most_votes&query=) | [寻找旋转排序数组中的最小值](FindMinInRotatedSortedArray.java)| 🟡 中等 | 二分查找 | - |
 | [126](https://leetcode.com/problems/word-ladder-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [单词接龙 II]()| 🔴 困难 | 深度优先、广度优先 | - |
 
 - 使用二分查找，寻找一个半有序数组 [4, 5, 6, 7, 0, 1, 2] 中间无序的地方
@@ -144,19 +144,23 @@ public int binarySearch(int[] array, int target) {
  ```java
  public int findDisOrder(int[] array) {
      
-    int left = 0, right = array.length - 1, mid;
-    while ((right-left) > 1) {
-         mid = (right - left) / 2 + left;
+    int lowest = nums[left] > nums[right]? right: left;
+   
+    while (right - left >1) {
+   
+        int mid = left + (right-left)/2;
+   
+        if (nums[mid] > nums[left]) {
+            left = mid;
+        }
+   
+        if (nums[mid] < nums[right]) {
+            right = mid;
+        }
+    }
+   
+    lowest = nums[lowest] > nums[right]? right: lowest;
  
-         if (array[left] > array[mid]) {
-             right = mid;
-         }
-         
-         if (array[mid] > array[right]) {
-             left = mid;
-         }
-     }
- 
-     return right;
+    return lowest;
  }
  ```
