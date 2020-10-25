@@ -35,7 +35,7 @@
 |221 |[最大正方形](MaxSquare.java)|
 |621|[任务调度器](TaskScheduler.java)|
 |647|[回文子串](PalindromicSubstrings.java)|
-|最长有效括号|
+|32|[最长有效括号](LongestParentheses.java)|
 |编辑距离|
 |矩形区域不超过K的最大数值和|
 |青蛙过河|
