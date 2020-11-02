@@ -347,8 +347,8 @@ class UnionFind {
 |36|[有效的数独](ValidSudoku.java)|
 |22|[括号生成](GenParentheses.java)|
 |127|[单词接龙](WordLadder.java)|
-|最小基因变化|
-|单词搜索II|
+|433|[最小基因变化](GeneticMutation.java)|
+|212|[单词搜索II](WordSearch2.java)|
 |N皇后|
 |解数独|
 
