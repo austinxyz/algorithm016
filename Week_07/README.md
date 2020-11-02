@@ -344,9 +344,9 @@ class UnionFind {
 |547|[朋友圈](FriendCircles.java)|
 |200|[岛屿数量](NumberOfIslands.java)|
 |130|[被围绕的区域](SurroundedRegions.java)|
-|有效的数独|
-|括号生成|
-|单词接龙|
+|36|[有效的数独](ValidSudoku.java)|
+|22|[括号生成](GenParentheses.java)|
+|127|[单词接龙](WordLadder.java)|
 |最小基因变化|
 |单词搜索II|
 |N皇后|
