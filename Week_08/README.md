@@ -10,8 +10,7 @@
 
 ### 位运算
 
-
-异或
+```
 x^0=x
 x^1s = ~x
 x^(~x) = 1s
@@ -27,11 +26,12 @@ x%2  判断奇偶
 x>>1  除2
 x&(x-1) 清零最低位的1
 x&-x 得到最低位的1
+```
 
 ### bloom filter和LRU
 
 - 如果不在，那么一定不在，如果在的，有可能是误判
-- [Java 参考]()https://github.com/lovasoa/bloomfilter/blob/master/src/main/java/BloomFilter.java)
+- [Java 参考](https://github.com/lovasoa/bloomfilter/blob/master/src/main/java/BloomFilter.java)
 
 ### LRU
 
