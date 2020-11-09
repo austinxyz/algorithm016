@@ -153,10 +153,10 @@ public static void heapSort(int[] array) {
 |231|[2的幂](PowerOfTwo.java)|
 |190|[颠倒二进制位](ReverseBits.java)|
 |1122|[数组的相对排序](RelativeSortArray.java)|
-|242|有效的字母异位词|
-|146|LRU缓存机制|
+|242|[有效的字母异位词](ValidAnagram.java)|
+|146|[LRU缓存机制](LRUCache.java)|
 |1244|力扣排行榜|
-|56|合并区间|
+|56|[合并区间](MergeIntervals.java)|
 |N皇后|
 |N皇后II|
 |翻转对|
