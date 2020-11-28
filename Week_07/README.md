@@ -97,6 +97,8 @@ class UnionFind {
 
 ### 双向BFS
 - 从起点和终点都做广度优先，相遇就得到结果
+- 用打擂台模式，那个短，那个先遍历
+双向BFS的模版 - 可以参看 [WordLadder](WordLadder.java)
 
 ### 启发式搜索
 - 估值函数
