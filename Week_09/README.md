@@ -68,7 +68,7 @@ KMP
 |151|[翻转字符串里的单词](ReverseWords.java)|
 |557|[翻转字符串里的单词III](ReverseWorksIII.java)|
 |917|[仅仅反转字母](ReverseOnlyLetter.java)|
-|同构字符串|
+|205|[同构字符串](IsomorphicStrings.java)|
 |验证回文字符串II|
 |最长上升子序列|
 |解码方法|
