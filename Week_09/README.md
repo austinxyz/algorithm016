@@ -65,9 +65,9 @@ KMP
 | --- | --- | --- | --- | --- |
 |387|[字符串中的第一个唯一字符](FirstUniqueChar.java)|
 |541|[反转字符串II](ReverseStringII.java)|
-|翻转字符串里的单词|
-|翻转字符串里的单词III|
-|仅仅反转字母|
+|151|[翻转字符串里的单词](ReverseWords.java)|
+|557|[翻转字符串里的单词III](ReverseWorksIII.java)|
+|917|[仅仅反转字母](ReverseOnlyLetter.java)|
 |同构字符串|
 |验证回文字符串II|
 |最长上升子序列|
