@@ -69,8 +69,8 @@ KMP
 |557|[翻转字符串里的单词III](ReverseWorksIII.java)|
 |917|[仅仅反转字母](ReverseOnlyLetter.java)|
 |205|[同构字符串](IsomorphicStrings.java)|
-|验证回文字符串II|
-|最长上升子序列|
+|680|[验证回文字符串II](ValidPalindromeII.java)|
+|300|[最长上升子序列](LongestIncSubSeq.java)|
 |解码方法|
 |字符串转换整数|
 |找到字符串中所有字母异位词|
