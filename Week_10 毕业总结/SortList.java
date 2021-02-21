@@ -50,7 +50,61 @@
  */
 class Solution {
 
+
     public ListNode sortList(ListNode head) {
+
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode prev = null;
+        ListNode slow = head;
+        ListNode fast = slow;
+
+        while (fast !=null && fast.next !=null) {
+            prev = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        prev.next = null;
+
+        ListNode top1 = sortList(head);
+        ListNode top2 = sortList(slow);
+
+        return mergeSort(top1, top2);
+
+
+    }
+
+    private ListNode mergeSort(ListNode top1, ListNode top2) {
+
+        ListNode top = new ListNode();
+        ListNode curr = top;
+
+        while(top1 !=null && top2 !=null) {
+            if (top1.val > top2.val) {
+                curr.next = top2;
+                top2 = top2.next;
+            } else {
+                curr.next = top1;
+                top1 = top1.next;
+            }
+            curr = curr.next;
+        }
+
+        if (top1 == null) {
+            curr.next = top2;
+        }
+
+        if (top2 == null) {
+            curr.next = top1;
+        }
+
+        return top.next;
+
+    }
+/*    public ListNode sortList(ListNode head) {
 
         ListNode top = new ListNode();
         top.next = head;
@@ -61,7 +115,7 @@ class Solution {
 
         //return quickSort(head);
 
-    }
+    }*/
 
 /*
     private ListNode quickSort(ListNode head) {
@@ -103,7 +157,7 @@ class Solution {
     }
 */
 
-    private void quickSort(ListNode top, ListNode end) {
+/*    private void quickSort(ListNode top, ListNode end) {
 
         ListNode pilot = top.next;
 
@@ -138,6 +192,6 @@ class Solution {
         quickSort(top, pilot);
         quickSort(pilot, end);
 
-    }
+    }*/
 }
 //leetcode submit region end(Prohibit modification and deletion)
